@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Анастасия Сологуб](https://up.htmlacademy.ru/htmlcss/28/user/1145681).
-* Наставник: [Дмитрий Гуляев] (https://htmlacademy.ru/profile/dima).
+* Наставник: <a href="https://htmlacademy.ru/profile/dima">Дмитрий Гуляев</a>.
 
 ---
 

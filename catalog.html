@@ -11,21 +11,30 @@
 	<img src="img/logo-technomart.png" width="220" height="47" alt="Логотип Техномарт">
 	</a>
 	
-	<!--Объект input-->
-	<button type="button">Поиск</button>
+	<img src="img/icon-search.svg" width="17" height="17" alt="Поиск товара на сайте">
+	<form method="get" action="https://echo.htmlacademy.ru">
+		<label for="search">Поиск</label>
+		<input id="search" type="search" name="search">
+	</form>
+	
+	<img src="img/icon-bookmark.svg" width="14" height="16" alt="Закладки">
 	<a href="blank.html">Закладки</a>
+	<img src="img/icon-cart.svg" width="15" height="15" alt="Корзина">
 	<a href="blank.html">Корзина: 10</a>
 	<a href="blank.html">Оформить заказ</a>
 
 	<h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
 	
 	<p>
+		<img src="img/icon-phone.svg" width="19" height="19" alt="Наш контактный телефон">
 		<a href="tel:78125550555">+7 (812) 555-05-55</a><br>
 		г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 	</p>
 	
 	<div>
+		<img src="img/icon-user.svg" width="20" height="18" alt="Иконка пользователя">
 		<a href="blank.html">Равшан Джамшутович</a>
+		<img src="img/icon-login.svg" width="20" height="17" alt="Вход">
 		<a href="blank.html">Мои заказы</a>
     	<a href="blank.html">Личный кабинет</a>
 	</div>
@@ -58,19 +67,21 @@
 	</header>
 		
 <main>
-	<!--hidden-->
-	<h2>Каталог</h2>
+	<h2 class="visually-hidden">Каталог</h2>
 	<ul>
 		<li>
-			<a href="index.html">Главная</a>
+			<a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Вернуться на главную страницу"></a>
 		</li>
 		<li>
+			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперёд">
 			<a href="">Каталог</a>
 		</li>
 		<li>
+			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперёд">
 			<a href="blank.html">Инструмент</a>
 		</li>
 		<li>
+			<img src="img/icon-right-small.svg" width="8" height="12" alt="Вперёд">
 			<a href="blank.html">Перфораторы</a>
 		</li>
 	</ul>
@@ -79,32 +90,89 @@
 	
 	<section>
 	<h3>Фильтр</h3>
-	<h3>Цена</h3>
-		<p>Сортировка</p>
-			<button type="button">По цене</button>
-			<button type="button">По типу</button>
-			<button type="button">По функционалу</button>
-			<button type="button">Вверх</button>
-			<button type="button">Вниз</button>
-	<h3>Производители</h3>
-		<ul>
-			<li>Bosch</li>
-			<li>Интерскол</li>
-			<li>Makita</li>
-			<li>Dewalt</li>
-			<li>Hitachi</li>
-		</ul>
-	<h3>Питание</h3>
-		<ul>
-			<li>Аккумуляторные</li>
-			<li>Сетевые</li>
-		</ul>
-	<button type="button">Показать</button>
+		<p>Сортировка:</p>
+		<button type="button" aria-label="Сортировать товары по цене">По цене</button>
+		<button type="button" aria-label="Сортировать товары по типу">По типу</button>
+		<button type="button" aria-label="Сортировать товары по функционалу">По функционалу</button>
+		<button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="В верх списка"></button>
+		<button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="В верх списка"></button>
+		
+	<!--Здесь ниже я привела код, который пыталась реализовать. Заверстать горизонтальный фильтр сортировки в select. Загвоздка только в том, чтобы присвоить каждому select заголовки (по цене/по типу/по функционалу). С учётом использования optgroup я не могу понять, как разбить заголовки+сделать их интерактивными. Я всё равно оставлю этот пример тоже, чтобы можно было его обсудить. Плюс вопрос: стоило ли селекты в филдсет заворачивать?--
+
+	<fieldset>
+		<legend>Сортировка</legend>
+			<select name="range-prices">
+				<optgroup label="По цене">
+					<option value=""></option>
+					<option value=""></option>
+				</optgroup>
+			</select>
+			<select name="range-types">
+				<optgroup label="По типу">
+					<option value=""></option>
+					<option value=""></option>
+				</optgroup>
+			</select>
+			<select name="range-function">
+				<optgroup label="По функционалу">
+					<option value=""></option>
+					<option value=""></option>
+				</optgroup>
+			</select>
+		</fieldset>-->	
+<section>
+	<fieldset>
+		<legend for="price">Цена</legend>
+			<input id="price" type="range" min="0" max="40000" step="5000" value="30000">
+		<legend>Производители</legend>
+			<ul>
+				<li>
+					<input id="bosch" type="checkbox" name="BOSCH" checked>
+					<label for="bosch">Bosch</label>
+					<!--Тут была ранее в разметке иконка чекбокса. Мы её оставляем или стилизуем в CSS? Пока закомментила. 
+					img src="img/checkbox-on.svg" width="27" height="23" alt="Чекбокс выбран"-->
+				</li>
+				<li>
+					<input id="interskol" type="checkbox" name="interskol">
+					<label for="interskol">Интерскол</label>
+					<!--img src="img/checkbox-off.svg" width="23" height="23" alt="Чекбокс не выбран"-->
+				</li>
+				<li>
+					<input id="Makita" type="checkbox" name="Makita" checked>
+					<label for="Makita">Makita</label>
+					<!--img src="img/checkbox-on.svg" width="27" height="23" alt="Чекбокс выбран"-->
+				</li>
+				<li>
+					<input id="dewalt" type="checkbox" name="Dewalt">
+					<label for="Dewalt">Dewalt</label>
+					<!--img src="img/checkbox-off.svg" width="23" height="23" alt="Чекбокс не выбран"-->
+				</li>
+				<li>
+					<input id="Hitachi" type="checkbox" name="Hitachi">
+					<label for="Hitachi">Hitachi</label>
+					<!--img src="img/checkbox-off.svg" width="23" height="23" alt="Чекбокс не выбран"-->
+				</li>
+			</ul>
+		<legend>Питание</legend>
+			<ul>
+				<li>
+					<input id="power1" type="radio" value="power1" name="power">
+					<label for="power1">Аккумуляторные</label>
+					<!--Та же история с иконками радио
+					img src="img/radio-on.svg" width="25" height="25" alt="Выбран"-->
+				</li>
+				<li>
+					<input id="power2" type="radio" value="power2" name="power">
+					<label for="power2">Сетевые</label>
+					<!--img src="img/radio-off.svg" width="25" height="25" alt="Не выбран"-->
+				</li>
+			</ul>
+		<button type="submit" aria-label="Показать результаты фильтра">Показать</button>
 	</section>
 			
 	<section>
 		<!--hidden-->
-		<h4>Выбор товара</h4>
+		<h4 class="visually-hidden">Выбор товара</h4>
 		<ul>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
@@ -120,9 +188,16 @@
 			</li>
 			<li>
 				<!--по идее, как я понимаю задумку, при наведении выскакивают две кнопки Купить и В закладки, но без курсора - там по-прежнему картинка товара. Поэтому оставила её в разметке-->
-				<button type="button"><img src="knopka-kupit.svg" width="135" height="38" alt="Кнопка купить"></button>
-				<button type="button"><img src="knopka-v-zakladki.svg" width="135" height="38" alt="В закладки"></button>
+				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
 				<a href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<button type="button" aria-label="Купить этот товар">Купить</button>
+				
+				<!--Всплывающее модальное окно-->
+				<p>Товар добавлен в корзину!</p>
+				<a href="blank.html">Оформить заказ</a>
+				<button type="button" aria-label="Продолжить покупки в каталоге">Продолжить покупки</button>
+						
+				<button type="button">В закладки</button>
 				<p>30500 P.</p>
 				<p>25500 P.</p>
 			</li>
@@ -163,6 +238,11 @@
 			</li>
 		</ul>
 	</section>
+	
+	<!--блок пагинации-->
+	<a href="#">1</a>
+	<a href="blank.html">2</a>
+	<a href="blank.html">3</a>
 	
 	<p>
 		Пара слов о перфораторах

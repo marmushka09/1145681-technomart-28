@@ -67,7 +67,6 @@
 	</header>
 		
 <main>
-	<h2 class="visually-hidden">Каталог</h2>
 	<ul>
 		<li>
 			<a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Вернуться на главную страницу"></a>
@@ -86,11 +85,10 @@
 		</li>
 	</ul>
 	
-	<h2>Перфораторы</h2>
+	<p>Перфораторы</p>
 	
-	<section>
-	<h3>Фильтр</h3>
-		<p>Сортировка:</p>
+<section>
+	<h2>Сортировка</h2>
 		<button type="button" aria-label="Сортировать товары по цене">По цене</button>
 		<button type="button" aria-label="Сортировать товары по типу">По типу</button>
 		<button type="button" aria-label="Сортировать товары по функционалу">По функционалу</button>
@@ -120,11 +118,17 @@
 				</optgroup>
 			</select>
 		</fieldset>-->	
+</section>
+	
 <section>
+	<h3>Фильтр</h3>
 	<fieldset>
-		<legend for="price">Цена</legend>
-			<input id="price" type="range" min="0" max="40000" step="5000" value="30000">
-		<legend>Производители</legend>
+		<legend class="visually-hidden">Параметры товара</legend> 
+	<!--Не нашла нигде информацию по поводу обязательности-необязательности legend для fieldset. Думаю, лучше его сделать, но спрятать-->
+		
+		<p>Цена</p>
+			<input type="range" min="0" max="40000" step="5000" value="30000">
+		<p>Производители</p>
 			<ul>
 				<li>
 					<input id="bosch" type="checkbox" name="BOSCH" checked>
@@ -144,7 +148,7 @@
 				</li>
 				<li>
 					<input id="dewalt" type="checkbox" name="Dewalt">
-					<label for="Dewalt">Dewalt</label>
+					<label for="dewalt">Dewalt</label>
 					<!--img src="img/checkbox-off.svg" width="23" height="23" alt="Чекбокс не выбран"-->
 				</li>
 				<li>
@@ -153,7 +157,7 @@
 					<!--img src="img/checkbox-off.svg" width="23" height="23" alt="Чекбокс не выбран"-->
 				</li>
 			</ul>
-		<legend>Питание</legend>
+		<p>Питание</p>
 			<ul>
 				<li>
 					<input id="power1" type="radio" value="power1" name="power">
@@ -168,11 +172,12 @@
 				</li>
 			</ul>
 		<button type="submit" aria-label="Показать результаты фильтра">Показать</button>
-	</section>
+	</fieldset>
+</section>
 			
 	<section>
 		<!--hidden-->
-		<h4 class="visually-hidden">Выбор товара</h4>
+		<h5 class="visually-hidden">Выбор товара</h5>
 		<ul>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">

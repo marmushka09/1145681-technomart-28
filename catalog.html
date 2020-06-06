@@ -88,43 +88,21 @@
 	<p>Перфораторы</p>
 	
 <section>
+	<!--Прочитала твой коммент про сортировку. Это я так сложно старалась реализовать разбивку сортировки по группам. Понимаю, что в макете у нас нет полной интерактивности по этому блоку (я имею в виду, что раскрывающийся список не будет реализова). Но для общего развития может ответишь - а в настоящих проектах это как обычно реализуется?-->
+	
 	<h2>Сортировка</h2>
 		<button type="button" aria-label="Сортировать товары по цене">По цене</button>
 		<button type="button" aria-label="Сортировать товары по типу">По типу</button>
 		<button type="button" aria-label="Сортировать товары по функционалу">По функционалу</button>
 		<button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="В верх списка"></button>
 		<button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="В верх списка"></button>
-		
-	<!--Здесь ниже я привела код, который пыталась реализовать. Заверстать горизонтальный фильтр сортировки в select. Загвоздка только в том, чтобы присвоить каждому select заголовки (по цене/по типу/по функционалу). С учётом использования optgroup я не могу понять, как разбить заголовки+сделать их интерактивными. Я всё равно оставлю этот пример тоже, чтобы можно было его обсудить. Плюс вопрос: стоило ли селекты в филдсет заворачивать?--
-
-	<fieldset>
-		<legend>Сортировка</legend>
-			<select name="range-prices">
-				<optgroup label="По цене">
-					<option value=""></option>
-					<option value=""></option>
-				</optgroup>
-			</select>
-			<select name="range-types">
-				<optgroup label="По типу">
-					<option value=""></option>
-					<option value=""></option>
-				</optgroup>
-			</select>
-			<select name="range-function">
-				<optgroup label="По функционалу">
-					<option value=""></option>
-					<option value=""></option>
-				</optgroup>
-			</select>
-		</fieldset>-->	
 </section>
 	
 <section>
 	<h3>Фильтр</h3>
 	<fieldset>
 		<legend class="visually-hidden">Параметры товара</legend> 
-	<!--Не нашла нигде информацию по поводу обязательности-необязательности legend для fieldset. Думаю, лучше его сделать, но спрятать-->
+	<!--Не нашла нигде информацию по поводу обязательности-необязательности legend для fieldset. Но запомнила, что legend один должен быть. Я ему пока присвоила visually-hidden, чтобы оставить в разметке-->
 		
 		<p>Цена</p>
 			<input type="range" min="0" max="40000" step="5000" value="30000">

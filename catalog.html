@@ -3,44 +3,55 @@
 <head>
 	<meta charset="utf-8">
 	<title>Technomart</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital@0;1&family=PT+Sans:wght@400;700&display=swap">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css" >
 </head>
 
 <body>
 <header>
-	<a>
-	<img src="img/logo-technomart.png" width="220" height="47" alt="Логотип Техномарт">
-	</a>
+	<div class="header-navigation">
+		<a class="logo-inter" href="index.html">
+		<img src="img/logo-technomart.png" width="220" height="47" alt="Логотип Техномарт">
+		</a>
 	
-	<img src="img/icon-search.svg" width="17" height="17" alt="Поиск товара на сайте">
-	<form method="get" action="https://echo.htmlacademy.ru">
-		<label for="search">Поиск</label>
-		<input id="search" type="search" name="search">
-	</form>
+		<img src="img/icon-search.svg" width="17" height="17" alt="Поиск товара на сайте">
+		<form method="get" action="https://echo.htmlacademy.ru">
+			<label class="visually-hidden" for="search">Поиск</label>
+			<input id="search" class="search-focus" type="search" name="search" placeholder="Поиск:">
+		</form>
 	
-	<img src="img/icon-bookmark.svg" width="14" height="16" alt="Закладки">
-	<a href="blank.html">Закладки</a>
-	<img src="img/icon-cart.svg" width="15" height="15" alt="Корзина">
-	<a href="blank.html">Корзина: 10</a>
-	<a href="blank.html">Оформить заказ</a>
-
-	<h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
+	<img src="img/icon-bookmark.svg" width="14" height="16" alt="Добавить товар в закладки">
+	<a class="user-panel" href="blank.html">Закладки</a>
+		
+	<img src="img/icon-cart.svg" width="15" height="15" alt="Корзина покупок">
+	<a class="user-cart" href="blank.html">Корзина: 10</a>
+		<div class="order">
+			<a href="blank.html">Оформить заказ</a>
+		</div>
+	</div>
+	
+	<div class="background">
+		<h1 class="headline">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
 	
 	<p>
 		<img src="img/icon-phone.svg" width="19" height="19" alt="Наш контактный телефон">
-		<a href="tel:78125550555">+7 (812) 555-05-55</a><br>
-		г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+		<a class="tel" href="tel:78125550555">+7 (812) 555-05-55</a><br>
+		г Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 	</p>
 	
-	<div>
+	<div class="user-navigation">
 		<img src="img/icon-user.svg" width="20" height="18" alt="Иконка пользователя">
-		<a href="blank.html">Равшан Джамшутович</a>
+		<a class="enter-button" href="blank.html">Равшан Джамшутович</a>
 		<img src="img/icon-login.svg" width="20" height="17" alt="Вход">
-		<a href="blank.html">Мои заказы</a>
-    	<a href="blank.html">Личный кабинет</a>
+			<div class="enter-button-lk">
+				<a href="blank.html">Мои заказы</a>
+    			<a href="blank.html">Личный кабинет</a>
+			</div>
 	</div>
 	
-	<nav>
-		<ul>
+	<nav class="main-navigation">
+		<ul class="list-style">
 			<li>
 				<a href="index.html">Главная</a>
 			</li>
@@ -63,11 +74,12 @@
 				<a href="blank.html">Контакты</a>
 			</li>
 		</ul>
-	</nav>
-	</header>
+		</nav>
+	</div>
+</header>
 		
 <main>
-	<ul>
+	<ul class="bread-crumbs">
 		<li>
 			<a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Вернуться на главную страницу"></a>
 		</li>
@@ -85,33 +97,39 @@
 		</li>
 	</ul>
 	
-	<p>Перфораторы</p>
+	<p class="headline-items background-headline">Перфораторы</p>
 	
 <section>
-	<!--Прочитала твой коммент про сортировку. Это я так сложно старалась реализовать разбивку сортировки по группам. Понимаю, что в макете у нас нет полной интерактивности по этому блоку (я имею в виду, что раскрывающийся список не будет реализова). Но для общего развития может ответишь - а в настоящих проектах это как обычно реализуется?-->
-	
-	<h2>Сортировка</h2>
-		<button type="button" aria-label="Сортировать товары по цене">По цене</button>
-		<button type="button" aria-label="Сортировать товары по типу">По типу</button>
-		<button type="button" aria-label="Сортировать товары по функционалу">По функционалу</button>
-		<button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="В верх списка"></button>
-		<button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="В верх списка"></button>
+	<h2 class="sort-items">Сортировка</h2>
+	<!--Здесь были button, но я не смогла убрать им рамку, как только не пыталась...и через border, и через outline-->
+	<div class="sort-items">
+			<a class="choosen" href="#">По цене</a>
+			<a class="choosen" href="#">По типу</a>
+			<a class="choosen" href="#">По функционалу</a>
+	<!--Теперь вопрос с этими вот стрелками - их как-то через CSS лучше нарисовать и тоже сделать с псевдоклассами или всё-таки оставляем img и как-то поменять цвет при интерактивности?-->
+			<a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="В верх списка"></a>
+			<a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="В верх списка"></a>
+	</div>
 </section>
 	
 <section>
-	<h3>Фильтр</h3>
+	<h3 class="sort-items">Фильтр</h3>
 	<fieldset>
-		<legend class="visually-hidden">Параметры товара</legend> 
-	<!--Не нашла нигде информацию по поводу обязательности-необязательности legend для fieldset. Но запомнила, что legend один должен быть. Я ему пока присвоила visually-hidden, чтобы оставить в разметке-->
+		<legend class="visually-hidden">Параметры товара</legend>
 		
-		<p>Цена</p>
+		<p class="filter-headlines">Цена</p>
+		<div class="range-style">
+			<!--Не могу понять, как стилизовать range и chekbox. Или я не дошла до этого...В гугле слишком замудрённые какие-то решения, в том числе на JS-->
 			<input type="range" min="0" max="40000" step="5000" value="30000">
-		<p>Производители</p>
-			<ul>
+			<p>0</p>
+			<p>30000</p>
+		</div>
+		<p class="filter-headlines">Производители</p>
+			<ul class="list-style filter-text">
 				<li>
 					<input id="bosch" type="checkbox" name="BOSCH" checked>
 					<label for="bosch">Bosch</label>
-					<!--Тут была ранее в разметке иконка чекбокса. Мы её оставляем или стилизуем в CSS? Пока закомментила. 
+					<!--Тут была ранее в разметке иконка чекбокса. 
 					img src="img/checkbox-on.svg" width="27" height="23" alt="Чекбокс выбран"-->
 				</li>
 				<li>
@@ -135,8 +153,8 @@
 					<!--img src="img/checkbox-off.svg" width="23" height="23" alt="Чекбокс не выбран"-->
 				</li>
 			</ul>
-		<p>Питание</p>
-			<ul>
+		<p class="filter-headlines">Питание</p>
+			<ul class="list-style filter-text">
 				<li>
 					<input id="power1" type="radio" value="power1" name="power">
 					<label for="power1">Аккумуляторные</label>
@@ -149,30 +167,30 @@
 					<!--img src="img/radio-off.svg" width="25" height="25" alt="Не выбран"-->
 				</li>
 			</ul>
-		<button type="submit" aria-label="Показать результаты фильтра">Показать</button>
+		<button class="sort-items show-filter" type="submit" aria-label="Показать результаты фильтра">Показать</button>
 	</fieldset>
 </section>
 			
 	<section>
 		<!--hidden-->
 		<h5 class="visually-hidden">Выбор товара</h5>
-		<ul>
+		<ul class="user-attention border">
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-6000</a>
-				<p>30500 P.</p>
-				<p>25500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<p class="price old-price">30500 P.</p>
+				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-6000</a>
-				<p>30500 P.</p>
-				<p>25500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<p class="price old-price">30500 P.</p>
+				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<!--по идее, как я понимаю задумку, при наведении выскакивают две кнопки Купить и В закладки, но без курсора - там по-прежнему картинка товара. Поэтому оставила её в разметке-->
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
 				<button type="button" aria-label="Купить этот товар">Купить</button>
 				
 				<!--Всплывающее модальное окно-->
@@ -181,125 +199,135 @@
 				<button type="button" aria-label="Продолжить покупки в каталоге">Продолжить покупки</button>
 						
 				<button type="button">В закладки</button>
-				<p>30500 P.</p>
-				<p>25500 P.</p>
+				<p class="price old-price">30500 P.</p>
+				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-3000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-3000</a>
-				<p>22500 P.</p>
-				<p>15500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-3000</a>
+				<p class="price old-price">22500 P.</p>
+				<p class="price new-price">15500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-6000</a>
-				<p>30500 P.</p>
-				<p>25500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<p class="price old-price">30500 P.</p>
+				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-2000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-2000</a>
-				<p>30500 P.</p>
-				<p>25500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-2000</a>
+				<p class="price old-price">30500 P.</p>
+				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-3000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-3000</a>
-				<p>22500 P.</p>
-				<p>15500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-3000</a>
+				<p class="price old-price">22500 P.</p>
+				<p class="price new-price">15500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-6000</a>
-				<p>30500 P.</p>
-				<p>25500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<p class="price old-price">30500 P.</p>
+				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-2000">
-				<a href="catalog.html">Перфоратор BOSCH BFG-2000</a>
-				<p>12500 P.</p>
+				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-2000</a>
+				<p class="price new-price">12500 P.</p>
 			</li>
 		</ul>
 	</section>
 	
-	<!--блок пагинации-->
-	<a href="#">1</a>
-	<a href="blank.html">2</a>
-	<a href="blank.html">3</a>
+	<div class="pagination">
+		<a href="#">1</a>
+		<a href="blank.html">2</a>
+		<a href="blank.html">3</a>
+		<a href="blank.html">Следующая</a>
+	</div>
 	
-	<p>
-		Пара слов о перфораторах
-	</p>
-	<p>
+	<div class="services">
+		<p class="headline-services">
+			Пара слов о перфораторах
+		</p>
+		<p class="text-services">
 		Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br> В ассориментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-	</p>
+		</p>
+	</div>
 </main>
 			
 <footer>
-	<img src="img/logo-technomart.png" width="220" height="68" alt="Логотип Техномарт">
-	
-	<p>
-		<a href="tel:78125550555">+7 (812) 555-05-55</a><br>г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-	</p>
-	
-	<ul>
-		<li>
-			<a href="blank.html">Компания</a>
-		</li>
-		<li>
-			<a href="blank.html">Новости</a>
-		</li>
-		<li>
-			<a href="catalog.html">Каталог</a>
-		</li>
-		<li>
-			<a href="blank.html">Доставка</a>
-		</li>
-		<li>
-			<a href="blank.html">Контакты</a>
-		</li>
-	</ul>
-	<ul>
-		<li>
-			<a href="blank.html">Материалы</a>
-		</li>
-		<li>
-			<a href="blank.html">Техника</a>
-		</li>
-		<li>
-			<a href="blank.html">Инструмент</a>
-		</li>
-		<li>
-			<a href="blank.html">Спецпредложения</a>
-		</li>
-	</ul>
+	<div class="footer-top">
+		<img src="img/logo-technomart.png" width="220" height="68" alt="Логотип Техномарт">
 		
-	<p>
-		&#169; 2010-2019 Компания "Техномарт"<br>Все права защищены
-	</p>
+	<div class="footer-contact">
+		<p>
+			<a href="tel:78125550555">+7 (812) 555-05-55</a><br>
+			г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+		</p>
+	</div>
+	
+		<ul class="footer-nav-first list-style">
+			<li>
+				<a href="blank.html">Компания</a>
+			</li>
+			<li>
+				<a href="blank.html">Новости</a>
+			</li>
+			<li>
+				<a href="catalog.html">Каталог</a>
+			</li>
+			<li>
+				<a href="blank.html">Доставка</a>
+			</li>
+			<li>
+				<a href="blank.html">Контакты</a>
+			</li>
+		</ul>
+		<ul class="footer-nav-second list-style">
+			<li>
+				<a href="blank.html">Материалы</a>
+			</li>
+			<li>
+				<a href="blank.html">Техника</a>
+			</li>
+			<li>
+				<a href="blank.html">Инструмент</a>
+			</li>
+			<li>
+				<a href="blank.html">Спецпредложения</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="footer-bottom">
+		<p class="footer-block-1">
+			&#169; 2010-2019 Компания "Техномарт"<br>Все права защищены
+		</p>
 		
-	<ul>
-		<li>
-			<a href="#"><img src="img/social-vk.svg" width="44" height="44" alt="Вконтакте"></a>
-		</li>
-		<li>
-			<a href="#"><img src="img/social-fb.svg" width="44" height="44" alt="Facebook"></a>
-		</li>
-		<li>
-			<a href="#"><img src="img/social-instagram.svg" width="44" height="44" alt="Instagram"></a>
-		</li>
-	</ul>
+		<ul class="list-style social-button">
+			<li>
+				<a href="#"><img src="img/social-vk.svg" width="44" height="44" alt="Вконтакте"></a>
+			</li>
+			<li>
+				<a href="#"><img src="img/social-fb.svg" width="44" height="44" alt="Facebook"></a>
+			</li>
+			<li>
+				<a href="#"><img src="img/social-instagram.svg" width="44" height="44" alt="Instagram"></a>
+			</li>
+		</ul>
 	
-	<p>
-		Обратная связь
-		<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-	</p>
+		<p class="footer-block-1">
+			Обратная связь
+			<a class="footer-block-2" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+		</p>
 	
-	<p>
-		Разработано -
-		<a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>	
-	</p>
-
+		<p class="footer-block-1">
+			Разработано -
+			<a class="footer-block-2" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>	
+		</p>
+	</div>
 </footer>
 </body>
 </html>

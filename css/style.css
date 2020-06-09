@@ -34,21 +34,16 @@
 --special-red-active: #BA2732;
 --special-grey-active: #161D29;
 --special-grey-nav-active: #1D2739;
-	
-}
-
-/**Directions/
-@font-face {}
-font-family: 
+--special-grey-pagination: #E5E5E5;
 }
 
 /*Global*/
 body {
-	width: 1220px;
+	width: 960px;
 	margin: 0px;
 	padding: 0px;
 	
-	font-family: "PT Sans", "Cuprum", "Arial", sans-serif;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	
@@ -71,7 +66,13 @@ img {
 /*Classes*/
 .visually-hidden {
 	position: absolute;
-	clip: rect(0 0 0 0);
+  	width: 1px;
+  	height: 1px;
+  	margin: -1px;
+  	border: 0;
+  	padding: 0;
+  	clip: rect(0 0 0 0);
+  	overflow: hidden;
 }
 
 .list-style {
@@ -84,9 +85,6 @@ img {
 
 /*Navigation classes header*/
 .header-navigation {
-	font-family: "Cuprum";
-	font-style: normal;
-	font-weight: normal;
 	font-size: 18px;
 	line-height: 24px;
 	color: var(--basic-white);
@@ -101,26 +99,11 @@ img {
 	background-color: var(--special-red-active);
 }
 
-.search-focus:enabled {
-	font-family: "Cuprum";
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 24px;
-	color: var(--basic-white);
+.search-focus {
 	background-color: var(--basic-grey-dark);
 }
 
-.search-focus input:placeholder-shown {
-	color: var(--basic-white);
-}
-
 .search-focus:focus {
-	font-family: "Cuprum";
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 24px;
 	background-color: var(--basic-white);
 	color: var(--basic-black);
 }
@@ -147,7 +130,6 @@ img {
 }
 
 .headline {
-	font-family: "Cuprum";
 	font-style: italic;
 	font-weight: normal;
 	line-height: 23px;
@@ -155,40 +137,32 @@ img {
 }
 
 .tel {
-	font-family: Cuprum;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
 	color: var(--basic-red);
-	border: 3px solid #FFFFFF;
+	border: 3px solid;
+	border-color: var(--basic-white);
 }
 
 .user-navigation a {
-	font-family: "Cuprum";
-	font-style: normal;
 	font-weight: normal;
 	font-size: 21px;
 	line-height: 21px;
 	color: var(--basic-black);
-}
-
-.enter-button a {
 	background-color: var(--basic-white);
 }
 
-.enter-button:hover {
+.user-navigation a:hover {
 	color: var(--basic-red);
 }
 
-.enter-button:active {
+.user-navigation a:active {
 	color: var(--special-grey-cursor);
 }
 
 .main-navigation {
-	font-family: "Cuprum"; 
-	font-style: normal;
-	font-weight: normal;
 	font-size: 18px;
 	color: var(--basic-white);
 	background-color: var(--basic-grey-dark);
@@ -207,73 +181,70 @@ img {
 }
 
 /*Promo-classes*/
-.promo li {
-	color: var(--basic-white);
-	font-family: "Cuprum";
-	font-style: normal;
-	font-weight: normal;
+.promo {
 	font-size: 24px;
 	line-height: 30px;
+	color: var(--basic-white);
 }
 
-.promo a {
-	color: var(--basic-white);
+.promo-link {
 	font-size: 14px;
 	line-height: 18px;
+	color: var(--basic-white);
 	text-transform: uppercase;
 }
 
-.promo li:first-child {
+.promo-materials {
 	background-color: var(--special-yellow-promo);
 }
 
-.promo li:nth-child(2) {
+.promo-tools {
 	background-color: var(--special-blue-promo);
 }
 
-.promo li:nth-child(3) {
+.promo-technology {
 	background-color: var(--special-purple-promo);
 }
 
-.promo li:nth-child(4) {
+.promo-discounts {
 	background-color: var(--special-green-promo);
 }
 
-.promo li:last-child {
-	color: var(--basic-black);
+.promo-slider {
+	background-color: var(--basic-grey-dark);
 }
 
-.promo li:nth-child(5) {
+.promo-delivery {
 	background-color: var(--special-yellow-2promo);
 }
 
-.promo a:hover {
+.promo-link:hover {
 	background-color: var(--special-grey-cursor);
 }
 
-.promo a:active {
+.promo-link:active {
 	background-color: var(--special-grey-price);
 }
 
 .red-button {
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
 	background-color: var(--basic-red);
 	color: var(--basic-white);
-	text-transform: uppercase;
 	border: 0px;
 }
 
-.red-button a:hover {
+.red-button:hover {
 	background-color: var(--basic-red);
 }
 
-.red-button a:active {
+.red-button:active {
 	background-color: var(--special-red-active);
 }
 
 /*Goods and developers classes*/
 .headline-items {
-	font-family: "Cuprum";
-	font-style: normal;
 	font-weight: normal;
 	font-size: 30px;
 	line-height: 30px;
@@ -283,7 +254,8 @@ img {
 }
 
 .border li {
-	border: 1px solid #EAEAEA;
+	border: 1px solid;
+	border-color: var(--basic-border);
 	color: var(--basic-border);
 }
 .item-name {
@@ -298,8 +270,8 @@ img {
 .price {
 	font-family: "PT Sans";
 	font-style: normal;
-	font-size: 17px;
 	font-weight: bold;
+	font-size: 17px;
 	line-height: 18px;
 	text-transform: uppercase;
 }
@@ -314,7 +286,7 @@ img {
 	background-color: var(--basic-red);
 }
 
-ul.user-attention li:hover {
+.user-attention li:hover {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);;
 }
 
@@ -324,21 +296,21 @@ ul.user-attention li:hover {
 
 /*Services-classes*/
 .services {
-	font-family: "Cuprum";
-	font-style: normal;
-	font-weight: normal;
 	background-color: var(--basic-background-neutral);
 }
 
 .headline-services {
+	font-family: "Cuprum";
+	font-style: normal;
+	font-weight: normal;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 
 .info-services {
-	font-size: 36px;
-	line-height: 24px;
+	font-size: 30px;
+	line-height: 30px;
 	text-transform: uppercase;
 	color: var(--basic-grey-dark);
 }
@@ -353,8 +325,6 @@ ul.user-attention li:hover {
 }
 
 .button-services {
-	font-family: "Cuprum";
-	font-style: normal;
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
@@ -365,28 +335,29 @@ ul.user-attention li:hover {
 .button-services:hover {
 	color: var(--basic-white);
 	background-color: var(--basic-grey-light);
-	box-shadow: 0px 1px 0px #293449; 
+	box-shadow: 0px 1px 0px; 
+	border-color: var(--basic-grey-light);
 }
 
 .button-services:active {
 	color: var(--basic-black);
 	background-color: var(--basic-white);
-	box-shadow: 0px 1px 0px #FFFFFF;
+	box-shadow: 0px 1px 0px;
+	border-color: var(--basic-white);
 }
 
 .tk-partners li {
-	font-family: "Cuprum";
-	font-style: normal;
 	font-size: 18px;
 	line-height: 24px;
 }
 
 .data {
-	color: var(--special-grey-price);
 	font-family: "PT Sans";
 	font-style: normal;
+	font-weight: normal;
 	font-size: 13px;
 	line-height: 24px;
+	color: var(--special-grey-price);
 }
 
 /*Footer classes*/
@@ -422,9 +393,6 @@ ul.user-attention li:hover {
 }
 
 .footer-block-1 {
-	font-family: Cuprum;
-	font-style: normal;
-	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--basic-white);
@@ -445,9 +413,6 @@ ul.user-attention li:hover {
 
 /*Catalog*/
 .enter-button-lk a {
-	font-family: "Cuprum";
-	font-style: normal;
-	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--basic-grey-dark);
@@ -465,7 +430,7 @@ ul.user-attention li:hover {
 	background-color: var(--basic-red);
 }
 
-.bread-crumbs a {
+.breadcrumbs a {
 	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: normal;
@@ -475,13 +440,12 @@ ul.user-attention li:hover {
 	color: var(--basic-black);
 }
 
-
 .background-headline {
 	background-color: var(--basic-background-catalog);
 }
 
 .sort-items,
-.sort-items a {
+.sort-items button {
 	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: normal;
@@ -490,22 +454,26 @@ ul.user-attention li:hover {
 	color: var(--basic-black);
 	background-color: var(--basic-background-filter);
 	text-transform: uppercase;
+	border: none;
 }
 
 .choosen {
 	opacity: 0.3;
-	text-decoration: underline dashed #EE3643;
+	text-decoration: underline dashed;
+	text-decoration-color: var(--basic-red);
 }
 
 .choosen:hover {
 	color: var(--basic-black);
-	text-decoration: underline solid #EE3643;
+	text-decoration: underline solid;
+	text-decoration-color: var(--basic-red);
 	opacity: 1;
 } 
 
 .choosen:active {
 	color: var(--basic-red);
-	text-decoration: underline solid #EE3643;
+	text-decoration: underline solid;
+	text-decoration-color: var(--basic-red);
 	opacity: 1;
 }
 
@@ -533,24 +501,28 @@ ul.user-attention li:hover {
 }
 
 .show-filter {
-	border: 1px solid #E5E5E5;
+	border: 1px solid;
+	border-color: var(--special-grey-pagination);
 	background-color: var(--basic-white);
 }
 
 .pagination a {
 	color: var(--basic-black);
 	background-color: var(--basic-white);
-	border: 1px solid #E5E5E5;
+	border: 1px solid;
+	border-color: var(--special-grey-pagination);
 	box-sizing: border-box;
 	border-radius: 2px;
 }
 
 .pagination a:hover {
-	border: 1px solid #C5C5C5;
+	border: 1px solid;
+	border-color: var(--special-grey-cursor);
 }
 
 .pagination a:active {
-	border: 1px solid #EE3643;
+	border: 1px solid;
+	border-color: var(--basic-red);
 }
 
 .pagination a:visited {

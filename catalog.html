@@ -21,14 +21,12 @@
 			<input id="search" class="search-focus" type="search" name="search" placeholder="Поиск:">
 		</form>
 	
-	<img src="img/icon-bookmark.svg" width="14" height="16" alt="Добавить товар в закладки">
-	<a class="user-panel" href="blank.html">Закладки</a>
+		<img src="img/icon-bookmark.svg" width="14" height="16" alt="Добавить товар в закладки">
+		<a class="user-panel" href="blank.html">Закладки</a>
 		
-	<img src="img/icon-cart.svg" width="15" height="15" alt="Корзина покупок">
-	<a class="user-cart" href="blank.html">Корзина: 10</a>
-		<div class="order">
-			<a href="blank.html">Оформить заказ</a>
-		</div>
+		<img src="img/icon-cart.svg" width="15" height="15" alt="Корзина покупок">
+		<a class="user-cart" href="blank.html">Корзина: 10</a>
+		<a class="order" href="blank.html">Оформить заказ</a>
 	</div>
 	
 	<div class="background">
@@ -79,7 +77,7 @@
 </header>
 		
 <main>
-	<ul class="bread-crumbs">
+	<ul class="list-style breadcrumbs">
 		<li>
 			<a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Вернуться на главную страницу"></a>
 		</li>
@@ -101,15 +99,14 @@
 	
 <section>
 	<h2 class="sort-items">Сортировка</h2>
-	<!--Здесь были button, но я не смогла убрать им рамку, как только не пыталась...и через border, и через outline-->
-	<div class="sort-items">
-			<a class="choosen" href="#">По цене</a>
-			<a class="choosen" href="#">По типу</a>
-			<a class="choosen" href="#">По функционалу</a>
-	<!--Теперь вопрос с этими вот стрелками - их как-то через CSS лучше нарисовать и тоже сделать с псевдоклассами или всё-таки оставляем img и как-то поменять цвет при интерактивности?-->
+			<button class="sort-items choosen" type="button" aria-label="Сортировать товары по цене">По цене</button>
+			<button class="sort-items choosen" type="button" aria-label="Сортировать товары по типу">По типу</button>
+			<button class="sort-items choosen" type="button" aria-label="Сортировать товары по функционалу">По функционалу</button>
+			<button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="В верх списка"></button>
+			<button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="В верх списка"></button>
+	<!--Лекция 7 - пвседоэлементы или через svg
 			<a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="В верх списка"></a>
-			<a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="В верх списка"></a>
-	</div>
+			<a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="В верх списка"></a>-->
 </section>
 	
 <section>
@@ -119,7 +116,7 @@
 		
 		<p class="filter-headlines">Цена</p>
 		<div class="range-style">
-			<!--Не могу понять, как стилизовать range и chekbox. Или я не дошла до этого...В гугле слишком замудрённые какие-то решения, в том числе на JS-->
+			<!--Стилизация range и chekbox - 7 лекция-->
 			<input type="range" min="0" max="40000" step="5000" value="30000">
 			<p>0</p>
 			<p>30000</p>
@@ -129,7 +126,7 @@
 				<li>
 					<input id="bosch" type="checkbox" name="BOSCH" checked>
 					<label for="bosch">Bosch</label>
-					<!--Тут была ранее в разметке иконка чекбокса. 
+					<!--иконка чекбокса. 
 					img src="img/checkbox-on.svg" width="27" height="23" alt="Чекбокс выбран"-->
 				</li>
 				<li>
@@ -156,9 +153,9 @@
 		<p class="filter-headlines">Питание</p>
 			<ul class="list-style filter-text">
 				<li>
-					<input id="power1" type="radio" value="power1" name="power">
+					<input id="power1" type="radio" value="power1" name="power" checked>
 					<label for="power1">Аккумуляторные</label>
-					<!--Та же история с иконками радио
+					<!--иконка радио
 					img src="img/radio-on.svg" width="25" height="25" alt="Выбран"-->
 				</li>
 				<li>
@@ -172,7 +169,6 @@
 </section>
 			
 	<section>
-		<!--hidden-->
 		<h5 class="visually-hidden">Выбор товара</h5>
 		<ul class="user-attention border">
 			<li>
@@ -188,7 +184,7 @@
 				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
-				<!--по идее, как я понимаю задумку, при наведении выскакивают две кнопки Купить и В закладки, но без курсора - там по-прежнему картинка товара. Поэтому оставила её в разметке-->
+				<!--модальное-->
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
 				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
 				<button type="button" aria-label="Купить этот товар">Купить</button>
@@ -307,6 +303,7 @@
 		</p>
 		
 		<ul class="list-style social-button">
+			<!--7 лекция-->
 			<li>
 				<a href="#"><img src="img/social-vk.svg" width="44" height="44" alt="Вконтакте"></a>
 			</li>

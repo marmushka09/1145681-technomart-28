@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 <head>
 	<meta charset="utf-8">
 	<title>Technomart</title>
@@ -8,11 +8,11 @@
 	<link rel="stylesheet" href="css/style.css" >
 </head>
 
-<body>
+<body class="page-body">
 <header>
 	<div class="header-navigation">
 		<a class="logo-inter" href="index.html">
-		<img src="img/logo-technomart.png" width="220" height="47" alt="Логотип Техномарт">
+		<img src="img/logo-technomart.png" width="220" height="47" alt="Логотип магазина Техномарт">
 		</a>
 	
 		<img src="img/icon-search.svg" width="17" height="17" alt="Поиск товара на сайте">
@@ -29,7 +29,8 @@
 		<a class="order" href="blank.html">Оформить заказ</a>
 	</div>
 	
-	<div class="background">
+	<div class="header-middle">
+		<div class="layout-header">
 		<h1 class="headline">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
 	
 	<p>
@@ -46,6 +47,7 @@
 				<a href="blank.html">Мои заказы</a>
     			<a href="blank.html">Личный кабинет</a>
 			</div>
+		</div>
 	</div>
 	
 	<nav class="main-navigation">
@@ -95,10 +97,10 @@
 		</li>
 	</ul>
 	
-	<p class="headline-items background-headline">Перфораторы</p>
-	
-<section>
-	<h2 class="sort-items">Сортировка</h2>
+	<p class="headline-items-catalog background-headline">Перфораторы</p>
+		
+<section class="sort-container">
+	<h2 class="sort-items clearfix">Сортировка</h2>
 			<button class="sort-items choosen" type="button" aria-label="Сортировать товары по цене">По цене</button>
 			<button class="sort-items choosen" type="button" aria-label="Сортировать товары по типу">По типу</button>
 			<button class="sort-items choosen" type="button" aria-label="Сортировать товары по функционалу">По функционалу</button>
@@ -110,11 +112,12 @@
 </section>
 	
 <section>
-	<h3 class="sort-items">Фильтр</h3>
-	<fieldset>
+	<div class="filter-container">
+	<h3 class="sort-items filter-column">Фильтр</h3>
+	<fieldset class="no-border clearfix">
 		<legend class="visually-hidden">Параметры товара</legend>
 		
-		<p class="filter-headlines">Цена</p>
+		<p class="filter-headlines filter-headlines-1">Цена</p>
 		<div class="range-style">
 			<!--Стилизация range и chekbox - 7 лекция-->
 			<input type="range" min="0" max="40000" step="5000" value="30000">
@@ -166,27 +169,29 @@
 			</ul>
 		<button class="sort-items show-filter" type="submit" aria-label="Показать результаты фильтра">Показать</button>
 	</fieldset>
+	</div>
 </section>
 			
 	<section>
+		<div class="filter-float">
 		<h5 class="visually-hidden">Выбор товара</h5>
-		<ul class="user-attention border">
+			<ul class="user-attention border goods-layout goods-container">
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
 				<p class="price old-price">30500 P.</p>
 				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
 				<p class="price old-price">30500 P.</p>
 				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<!--модальное-->
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
 				<button type="button" aria-label="Купить этот товар">Купить</button>
 				
 				<!--Всплывающее модальное окно-->
@@ -200,54 +205,55 @@
 			</li>
 			<li>
 				<img src="img/bfg-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-3000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-3000</a>
+				<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG-3000</a>
 				<p class="price old-price">22500 P.</p>
 				<p class="price new-price">15500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
 				<p class="price old-price">30500 P.</p>
 				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-2000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-2000</a>
+				<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG-2000</a>
 				<p class="price old-price">30500 P.</p>
 				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-3000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-3000</a>
+				<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG-3000</a>
 				<p class="price old-price">22500 P.</p>
 				<p class="price new-price">15500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
+				<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG-6000</a>
 				<p class="price old-price">30500 P.</p>
 				<p class="price new-price">25500 P.</p>
 			</li>
 			<li>
 				<img src="img/bfg-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-2000">
-				<a class="item-name" href="catalog.html">Перфоратор BOSCH BFG-2000</a>
+				<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG-2000</a>
 				<p class="price new-price">12500 P.</p>
 			</li>
 		</ul>
+		</div>
 	</section>
 	
 	<div class="pagination">
 		<a href="#">1</a>
 		<a href="blank.html">2</a>
 		<a href="blank.html">3</a>
-		<a href="blank.html">Следующая</a>
+		<a class="uppercase" href="blank.html">Следующая</a>
 	</div>
 	
-	<div class="services">
-		<p class="headline-services">
+	<div class="services service-layout-3">
+		<p class="headline-services headline-layout">
 			Пара слов о перфораторах
 		</p>
-		<p class="text-services">
+		<p class="text-services text-services-catalog">
 		Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br> В ассориментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.
 		</p>
 	</div>

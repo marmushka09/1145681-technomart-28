@@ -114,21 +114,30 @@
 				<a class="promo-link opacity-button" href="blank.html">бесплатно</a>
 			</li>
 			<li class="promo promo-slider">
-				<!--7 лекция-->
-				<h2>Перфораторы</h2> 
-				<p>Настоящие мужские игрушки</p>
+				<h2 class="visually-hidden">Инструменты в нашем магазине</h2>
+				<p class="promo-slider-head">Перфораторы</p> 
+				<p class="promo-slogan">Настоящие мужские игрушки</p>
 				<img src="img/promo-layer1.jpg" width="620" height="266" alt="Перфораторы">
-				<!--<button type="button" aria-label="Предыдущий слайд"></button>
-				<button type="button" aria-label="Следующий слайд"></button>-->
 		
-				<p class="visually-hidden">Дрели На радость соседям!</p>
-				<!--<button type="button" aria-label="Предыдущий слайд"></button>-->
-				<!--<img class="visually-hidden" src="img/promo-layer2.jpg" width="620" height="266" alt="Дрели">-->
-				<!--<button type="button" aria-label="Следующий слайд"></button-->
+				<p class="hidden-elements promo-slider-head">Дрели</p>
+				<p class="promo-slogan hidden-elements visually-hidden">На радость соседям!</p>
+				<img class="hidden-elements visually-hidden" src="img/drills.png" width="620" height="266" alt="Дрели">
 				<a class="red-button open-catalog-slider" href="catalog.html">Открыть каталог</a>
 			</li>
 		</ul>
 	</section>
+	
+	<script> 
+		function changeSlide(event, index) {
+    	let slideShow = document.querySelector('.promo-slider');
+		let slideHead = document.querySelector('.promo-slider-head');
+		let slideText = document.querySelector('promo-slogan') {
+        	isAutoplay: true,
+        	directionAutoplay: 'next',
+        	delayAutoplay: 5000,
+        	isPauseOnHover: true;
+    };
+	</script>
 	
 	<section class="container-size">
 		<div class="popular-goods">
@@ -208,39 +217,35 @@
 			<p class="text-services">Хороший интернет-магазин отличается от плохого не только ценами!<br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 		<div class="modal-block-pluses">
 		<ul class="list-style modal-list">
-			<li>
+			<li data-toggle="delivery-img">
 				<button class="button-services" type="button" aria-label="Жми, чтобы узнать о доставке">Доставка</button>
 			</li>
-			<li>
+			<li data-toggle="guarantee-img">
 				<button class="button-services" type="button" aria-label="Жми, чтобы узнать о наших гарантиях">Гарантия</button>
 			</li>
-			<li>
+			<li data-toggle="credit-img">
 				<button class="button-services" type="button" aria-label="Жми, чтобы узнать про кредит">Кредит</button>
 			</li>
 		</ul>
 		
 		<ul class="services list-style answers-modal-list">
-			<li class="delivery-img">
+			<li class="delivery-img active">
 				<p class="info-services">Доставка</p>
 				<p class="text-services">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
 			</li>
-			<!--<li class="guarantee-img">
+			<li class="guarantee-img">
 				<p class="info-services">Гарантия</p>
 				<p class="text-services">Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
-				<img src="img/layer-guarantee.svg" width="389" height="283" alt="Гарантии">
 			</li>
 			<li class="credit-img">
 				<p class="info-services">Кредит</p>
-				<p class="text-services">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+				<p class="text-services credit-margin">Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
 				<button class="red-button" type="submit" aria-label="Отправить заявку на кредит">Отправить заявку</button>
-				<img src="img/layer-credit.svg" width="465" height="285" alt="Кредит">
-				
-			</li>-->
+			</li>
 		</ul>
 		</div>
 		</div>
 	</section>
-	
 	
 	<div class="container-size about-company-container">
 		<div class="about-company-layouts">
@@ -268,11 +273,12 @@
 
 			<!--4.3. Блок карты: обычное изображение. Клик по ней открывает модальное окно с полноразмерной интерактивной картой. Окно позиционируется относительно вьюпорта, а не страницы. Реализация по желанию. Модальные окна в 9 лекции-->
 	
-			<button class="write-us-link red-button form-button" type="submit" form="write-us" aria-label="Жми, чтобы связаться с нами">Заблудились? Напишите нам!</button>
+			<button class="write-us-link red-button form-button" type="submit" form="write-us" onclick="getElementById('write-us').style.display='block'; return false;" aria-label="Жми, чтобы связаться с нами">Заблудились? Напишите нам!</button>
 			<form class="modal-write-us" action="https://echo.htmlacademy.ru" method="post" id="write-us">
 				<div class="modal-form">
 					<div class="modal-form-data">
 						<div class="modal-form-name">
+							
 							<label for="your-name" class="tk-partners">Ваше имя:</label>
 							<input id="your-name" type="text" class="data" name="your-name" placeholder="Имя Фамилия">
 						</div>
@@ -289,6 +295,13 @@
 				<div class="modal-button-write">
 					<button class="modal-button-send" type="submit">Отправить</button>
 				</div>
+				<button class="modal-close" onclick="closeModal();" aria-label="Закрыть окно"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть окно"></button>
+				<script>
+					document.querySelector('.write-us-link').onclick = function() {
+						document.getElementById('write-us').style.display = 'block';
+						return false;
+					};
+				</script>
 			</form>
 		</section>
 		</div>
@@ -368,5 +381,41 @@
 		</p>
 	</div>
 </footer>
+
+<script>
+	document.querySelector('.write-us-link').addEventListener('click', function(event) {
+		event.preventDefault();
+		document.getElementById('write-us').style.display = 'block';
+	});
+	
+	let links = document.querySelectorAll('.services-container .modal-list li');
+	
+	links.forEach(function(elem) {
+		elem.addEventListener('click', function(event) {
+			event.preventDefault();
+			
+			let id = elem.getAttribute('data-toggle');
+			
+			let blocks = document.querySelectorAll('.services li');
+			
+			blocks.forEach(function(elem) {
+				elem.classList.remove('active');
+			});
+			
+			document.querySelector('.services li.' + id).classList.add('active');
+		});
+	});
+</script>
+
+<style>
+	.services li {
+		display: none;
+	}
+	
+	.services li.active {
+		display: block;
+	}
+</style>
+		
 </body>
 </html>

@@ -1,5 +1,4 @@
 /* Variables */
-/* Variables */
 :root {
 --basic-grey-dark: #32425C;
 --basic-grey-light: #293449;
@@ -876,9 +875,13 @@ input[type="radio"].visually-hidden {
 }
 
 .services li {
-		display: none;
-	}
+	display: none;
+}
 	
+.services li.active {
+	display: block;
+}
+
 .answers-modal-list {
 	display: flex;
 	width: 619px;
@@ -923,12 +926,6 @@ input[type="radio"].visually-hidden {
 .credit-margin p {
 	margin-bottom: 32px;
 }
-
-/*Services-interactive*/
-.services li:active {
-	display: block;
-}
-
 
 /*About-company-classes*/
 .about-company-container {
@@ -1007,11 +1004,6 @@ input[type="radio"].visually-hidden {
 .company-layout-2 {
 	flex-direction: column; 
 	width: 300px;
-}
-
-.map {
-	margin-top: 32px;
-	margin-bottom: 25px;
 }
 
 
@@ -1295,7 +1287,6 @@ input[type="radio"].visually-hidden {
 	line-height: 18px;
 	text-transform: uppercase;
 	color: var(--basic-black);
-	
 }
 
 .no-padding {
@@ -1901,12 +1892,25 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .modal-map {
-	width: 943px;
-	height: 449px;
+	width: 300px;
+    height: 158px;
+	margin-bottom: 25px;
 	
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     background-color: var(--basic-white);
     border-top: 7px solid var(--basic-red);
+}
+
+.modal-map iframe {
+	position: fixed;
+	z-index: 2;
+	border: none;
+}
+
+.modal-map p {
+	margin: 0;
+    position: absolute;
+    z-index: 1;
 }
 
 .modal-close {
@@ -1962,4 +1966,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 	border: none;
     padding: 0px;
     background-color: var(--basic-white);
+}
+
+.services li {
+	display: none;
+}
+
+.services li:active {
+	display: block;
 }

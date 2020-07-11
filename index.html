@@ -7,9 +7,11 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/script.js"></script>
+	<script src="js/jquery-3.0.0.min.js"></script>
 </head>
 
 <body>
+	<div class="container-width-one">
 	<header class="container-size">
 		<div class="header-container-top">
 			<div class="header-navigation-top">
@@ -58,6 +60,7 @@
 				 		<img src="img/icon-login.svg" width="20" height="17" alt="Вход в Личный кабинет">
 				 		<a href="blank.html">Войти</a>
 					</div>
+					
 					<div class="header-user-registration">
 				 		<a href="blank.html">Регистрация</a>
 					</div>
@@ -93,12 +96,13 @@
 		</nav>
 	</div>
 </header>
+</div>
 	
 <main>
 	<section class="container-size">
 		<h2 class="visually-hidden">Промо-блок</h2>
 		<ul class="list-style promo-layout">
-			<li class="promo promo-materials promo-cards">Материалы
+			<li class="promo promo-materials promo-cards new-product">Материалы
 				<a class="promo-link opacity-button" href="blank.html">на любой вкус</a>
 			</li>
 			<li class="promo promo-tools promo-cards">Инструмент
@@ -115,18 +119,13 @@
 			</li>
 			<li class="promo promo-slider">
 				<h2 class="visually-hidden">Инструменты в нашем магазине</h2>
-				<p class="promo-slider-head">Перфораторы</p> 
-				<p class="promo-slogan">Настоящие мужские игрушки</p>
 				<img src="img/promo-layer1.jpg" width="620" height="266" alt="Перфораторы">
-		
-				<p class="hidden-elements promo-slider-head">Дрели</p>
-				<p class="promo-slogan hidden-elements visually-hidden">На радость соседям!</p>
-				<img class="hidden-elements visually-hidden" src="img/drills.png" width="620" height="266" alt="Дрели">
+				<img class="hidden-elements visually-hidden" src="img/promo-layer2.jpg" width="620" height="266" alt="Дрели">
 				<a class="red-button open-catalog-slider" href="catalog.html">Открыть каталог</a>
 			</li>
 		</ul>
 	</section>
-	
+
 	<section class="container-size">
 		<div class="popular-goods">
 			<h3 class="headline-items-index">Популярные товары:</h3>
@@ -197,43 +196,44 @@
 		</div>
 	</section>
 	
-	
-	<section class="container-size">
-	<div class="services-container">
-		<h3 class="visually-hidden">Наши преимущества</h3>
-			<p class="headline-services service-index-headline">Сервисы</p>
-			<p class="text-services">Хороший интернет-магазин отличается от плохого не только ценами!<br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-		<div class="modal-block-pluses">
-		<ul class="list-style modal-list">
-			<li data-toggle="delivery-img">
-				<button class="button-services" type="button" aria-label="Жми, чтобы узнать о доставке">Доставка</button>
-			</li>
-			<li data-toggle="guarantee-img">
-				<button class="button-services" type="button" aria-label="Жми, чтобы узнать о наших гарантиях">Гарантия</button>
-			</li>
-			<li data-toggle="credit-img">
-				<button class="button-services" type="button" aria-label="Жми, чтобы узнать про кредит">Кредит</button>
-			</li>
-		</ul>
-		
-		<ul class="services list-style answers-modal-list">
-			<li class="delivery-img active">
-				<p class="info-services">Доставка</p>
-				<p class="text-services">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
-			</li>
-			<li class="guarantee-img">
-				<p class="info-services">Гарантия</p>
-				<p class="text-services">Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
-			</li>
-			<li class="credit-img">
-				<p class="info-services">Кредит</p>
-				<p class="text-services credit-margin">Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
-				<button class="red-button" type="submit" aria-label="Отправить заявку на кредит">Отправить заявку</button>
-			</li>
-		</ul>
-		</div>
-		</div>
-	</section>
+	<div class="container-width-one">
+		<section class="container-size">
+		<div class="services-container">
+			<h3 class="visually-hidden">Наши преимущества</h3>
+				<p class="headline-services service-index-headline">Сервисы</p>
+				<p class="text-services">Хороший интернет-магазин отличается от плохого не только ценами!<br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+			<div class="modal-block-pluses">
+			<ul class="list-style modal-list">
+				<li data-toggle="delivery-img">
+					<button class="button-services" type="button" aria-label="Жми, чтобы узнать о доставке">Доставка</button>
+				</li>
+				<li data-toggle="guarantee-img">
+					<button class="button-services" type="button" aria-label="Жми, чтобы узнать о наших гарантиях">Гарантия</button>
+				</li>
+				<li data-toggle="credit-img">
+					<button class="button-services" type="button" aria-label="Жми, чтобы узнать про кредит">Кредит</button>
+				</li>
+			</ul>
+
+			<ul class="services list-style answers-modal-list">
+				<li class="delivery-img active">
+					<p class="info-services">Доставка</p>
+					<p class="text-services">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
+				</li>
+				<li class="guarantee-img">
+					<p class="info-services">Гарантия</p>
+					<p class="text-services">Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
+				</li>
+				<li class="credit-img">
+					<p class="info-services">Кредит</p>
+					<p class="text-services credit-margin">Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
+					<button class="red-button" type="submit" aria-label="Отправить заявку на кредит">Отправить заявку</button>
+				</li>
+			</ul>
+			</div>
+			</div>
+		</section>
+	</div>
 	
 	<div class="container-size about-company-container">
 		<div class="about-company-layouts">
@@ -256,10 +256,9 @@
 				<h4 class="headline-services headline-bottom">Контакты</h4>
 			</div>
 				<p class="text-services text-services-bottom text-services-margin">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-  			<div class="modal-map">	
-				<iframe src="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387192,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474?hl=ru" allowfullscreen></iframe>
-				<p><img class="text-services-margin" src="img/map.png" width="300" height="158" alt="Наш адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19.8"></p>
-  				<button class="modal-close" type="button" aria-label="Закрыть"></button>
+  			<div class="modal-map">
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4726d6f0be4f3e035db111b6761449f8a0800d5b4d8801becbfffd4341c05791&amp;source=constructor" allowfullscreen id="map-show"></iframe>
+					<p><img class="text-services-margin" src="img/map.png" width="300" height="158" alt="Наш адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19.8" onclick="getElementById('map-show').style.display='block'; return false;"></p>
 			</div>
 	
 			<button class="write-us-link red-button form-button" type="submit" form="write-us" onclick="getElementById('write-us').style.display='block'; return false;" aria-label="Жми, чтобы связаться с нами">Заблудились? Напишите нам!</button>
@@ -284,15 +283,15 @@
 				<div class="modal-button-write">
 					<button class="modal-button-send" type="submit">Отправить</button>
 				</div>
-				<button class="modal-close" onclick="closeModal();" aria-label="Закрыть окно"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть окно"></button>
+				<button class="modal-close" onclick="closeModal(); return false;" aria-label="Закрыть окно"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть окно"></button>
 			</form>
 		</section>
 		</div>
 	</div>
 </main>
-	
-<footer class="container-size">
-	<div class="footer-top">
+
+<footer class=" container-width-two">
+	<div class="container-size footer-top">
 		<div class="footer-logo-layout">
 			<img src="img/logo-technomart.png" width="220" height="68" alt="Логотип Техномарт">
 		</div>
@@ -335,33 +334,35 @@
 		</ul>
 	</div>
 	
-	<div class="footer-bottom">
-		<p class="footer-block-1 footer-container-1">
-			&#169; 2010-2019 Компания "Техномарт"<br>Все права защищены
-		</p>
-	
-		<ul class="list-style social-button">
-			<!--7 лекция-->
-			<li>
-				<a href="#"><img src="img/social-vk.svg" width="44" height="44" alt="Наша страница Вконтакте"></a>
-			</li>
-			<li>
-				<a href="#"><img src="img/social-fb.svg" width="44" height="44" alt="Наша страница на Facebook"></a>
-			</li>
-			<li>
-				<a href="#"><img src="img/social-instagram.svg" width="44" height="44" alt="Наш профиль в Instagram"></a>
-			</li>
-		</ul>
-			
-		<p class="footer-block-1 footer-container-2">
-			Обратная связь
-			<a class="footer-block-2" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-		</p>
-	
-		<p class="footer-block-1 footer-container-3">
-			Разработано -
-			<a class="footer-block-2" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-		</p>
+	<div class="container-width-three">
+		<div class="footer-bottom container-size">
+			<p class="footer-block-1 footer-container-1">
+				&#169; 2010-2019 Компания "Техномарт"<br>Все права защищены
+			</p>
+
+			<ul class="list-style social-button">
+				<!--7 лекция-->
+				<li>
+					<a href="#"><img src="img/social-vk.svg" width="44" height="44" alt="Наша страница Вконтакте"></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/social-fb.svg" width="44" height="44" alt="Наша страница на Facebook"></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/social-instagram.svg" width="44" height="44" alt="Наш профиль в Instagram"></a>
+				</li>
+			</ul>
+
+			<p class="footer-block-1 footer-container-2">
+				Обратная связь
+				<a class="footer-block-2" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+			</p>
+
+			<p class="footer-block-1 footer-container-3">
+				Разработано -
+				<a class="footer-block-2" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+			</p>
+		</div>
 	</div>
 </footer>
 		

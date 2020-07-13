@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
 
-document.querySelector('.write-us-link').onclick = function() {
-	document.getElementById('write-us').style.display = 'block';
-	return false;
-};
+document.querySelector('.write-us-link').addEventListener('click', function(event) {
+event.preventDefault();
+document.getElementById('write-us').style.display = 'block';
+});
 
 document.querySelector('.write-us-link').addEventListener('click', function(event) {
 	event.preventDefault();
 	document.getElementById('write-us').style.display = 'block';
 });
 	
-
 let links = document.querySelectorAll('.services-container .modal-list li');
 	links.forEach(function(elem) {
 	elem.addEventListener('click', function(event) {

@@ -6,16 +6,15 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital@0;1&family=PT+Sans:wght@400;700&display=swap">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/script.js"></script>
-	<script src="js/jquery-3.0.0.min.js"></script>
 </head>
 
 <body>
 	<div class="container-width-one">
-	<header class="container-size">
+		<div class="container-width-one-line"></div>
 		<div class="header-container-top">
+			<header class="container-size">
 			<div class="header-navigation-top">
-				<a class="header-logo-container" href="index.html">
+				<a class="header-logo-container" href="#">
 					<img src="img/logo-technomart-word.svg" width="108" height="18" alt="Логотип магазина Техномарт">
 				</a>
 			
@@ -27,15 +26,9 @@
 				</form>
 			</div>
 		
-			<div class="bookmarks-container">
-				<img src="img/icon-bookmark.svg" width="14" height="16" alt="Добавить товар в закладки">
-				<a href="blank.html">Закладки: 0</a>
-			</div>
+			<a class="bookmarks-container" href="blank.html" alt="Перейти в закладки товаров">Закладки: 0</a>
 	
-			<div class="cart-container">
-				<img class="form-style" src="img/icon-cart.svg" width="15" height="15" alt="Корзина покупок">
-				<a href="blank.html">Корзина: 0</a>
-			</div>
+			<a class="cart-container" href="blank.html" alt="Перейти в корзину с товарами">Корзина: 0</a>
 	
 			<div class="order-container">
 				<a class="order" href="blank.html">Оформить заказ</a>
@@ -57,7 +50,6 @@
 		
 				<div class="header-user-navigation">
 					<div class="header-user-enter">
-				 		<img src="img/icon-login.svg" width="20" height="17" alt="Вход в Личный кабинет">
 				 		<a href="blank.html">Войти</a>
 					</div>
 					
@@ -131,33 +123,64 @@
 			<h3 class="headline-items-index">Популярные товары:</h3>
 			<a class="red-button" href="catalog.html">Все популярные товары</a>
 		</div>
-			<div class="good-list-container">
-		<ul class="user-attention border good-list-layout">
-			<li>
-				<img src="img/bfg-9000.png" width="184" height="164" alt="Перфоратор BOSCH BFG-9000">
-				<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG 9000</a>
-				<p class="price old-price">32500 P.</p>
-				<p class="price new-price">25500 P.</p>
-			</li>
-			<li class="new-product">
-				<img src="img/bfg-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-3000">
-				<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG 3000</a>
-				<p class="price old-price">22500 P.</p>
-				<p class="price new-price">15500 P.</p>
-			</li>
-			<li>
-				<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
-				<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG 6000</a>
-				<p class="price old-price">30500 P.</p>
-				<p class="price new-price">25500 P.</p>
-			</li>
-			<li class="new-product">
-				<img class="new-product" src="img/bfg-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-9000">
-				<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG 2000</a>
-				<p class="price old-price">22500 P.</p>
-				<p class="price new-price">12500 P.</p>
-			</li>
-		</ul>
+		<div class="good-list-container">
+			<ul class="user-attention border good-list-layout">
+				<li>
+					<div class="item-img-size first-img">
+						<img src="img/bfg-9000.png" width="184" height="164" alt="Перфоратор BOSCH BFG-9000">
+					</div>
+					<div class="modal-info-item">
+						<a class="modal-buy">Купить</a>
+						<a class="modal-bookmark">В закладки</a>
+					</div>
+					<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG 9000</a>
+					<p class="price old-price">32500 P.</p>
+					<p class="price new-price">25500 P.</p>
+				</li>
+				<li class="new-product">
+					<div class="item-img-size-plus">
+						<img src="img/bfg-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-3000">
+					</div>
+					<div class="modal-info-item">
+						<a class="modal-buy">Купить</a>
+						<a class="modal-bookmark">В закладки</a>
+					</div>
+					<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG 3000</a>
+					<p class="price old-price">22500 P.</p>
+					<p class="price new-price">15500 P.</p>
+				</li>
+				<li>
+					<div class="item-img-size">
+						<img src="img/bfg-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG-6000">
+					</div>
+					<div class="modal-info-item">
+						<a class="modal-buy">Купить</a>
+						<a class="modal-bookmark">В закладки</a>
+					</div>
+					<a class="item-name item-1" href="catalog.html">Перфоратор BOSCH BFG 6000</a>
+					<p class="price old-price">30500 P.</p>
+					<p class="price new-price">25500 P.</p>
+				</li>
+				<li class="new-product">
+					<div class="item-img-size-big">
+						<img class="new-product" src="img/bfg-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG-2000">
+					</div>
+					<div class="modal-info-item">
+						<a class="modal-buy">Купить</a>
+						<a class="modal-bookmark">В закладки</a>
+					</div>
+					<a class="item-name item-2" href="catalog.html">Перфоратор BOSCH BFG 2000</a>
+					<p class="price old-price">22500 P.</p>
+					<p class="price new-price">12500 P.</p>
+					<div class="modal-block">
+						<p class="modal-message">Товар добавлен в корзину!</p>
+						<div class="modal-button">
+							<a class="modal-lk-cart" href="blank.html">Оформить заказ</a>
+							<button class="modal-button-cart" type="button">Продолжить покупки</button>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</section>
 	
@@ -205,7 +228,7 @@
 			<div class="modal-block-pluses">
 			<ul class="list-style modal-list">
 				<li data-toggle="delivery-img">
-					<button class="button-services" type="button" aria-label="Жми, чтобы узнать о доставке">Доставка</button>
+					<button class="button-services active-window" type="button" aria-label="Жми, чтобы узнать о доставке">Доставка</button>
 				</li>
 				<li data-toggle="guarantee-img">
 					<button class="button-services" type="button" aria-label="Жми, чтобы узнать о наших гарантиях">Гарантия</button>
@@ -227,7 +250,7 @@
 				<li class="credit-img">
 					<p class="info-services">Кредит</p>
 					<p class="text-services credit-margin">Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
-					<button class="red-button" type="submit" aria-label="Отправить заявку на кредит">Отправить заявку</button>
+					<a class="red-button" href="blank.html">Отправить заявку</a>
 				</li>
 			</ul>
 			</div>
@@ -239,7 +262,7 @@
 		<div class="about-company-layouts">
 		<section>
 			<div class="company-layout-1">
-			<h4 class="headline-services headline-bottom">Компания "ТЕХНОМАРТ"</h4>
+			<h4 class="headline-services headline-bottom">Компания «ТЕХНОМАРТ»</h4>
 				<p class="text-services text-services-bottom text-services-margin">Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
 				<p class="text-services text-services-bottom">Мы можем доставить ваш товар в самые отдалённые точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
 				<ul class="tk-partners list-style markers-list">
@@ -258,7 +281,7 @@
 				<p class="text-services text-services-bottom text-services-margin">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
   			<div class="modal-map">
 					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4726d6f0be4f3e035db111b6761449f8a0800d5b4d8801becbfffd4341c05791&amp;source=constructor" allowfullscreen id="map-show"></iframe>
-					<p><img class="text-services-margin" src="img/map.png" width="300" height="158" alt="Наш адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19.8" onclick="getElementById('map-show').style.display='block'; return false;"></p>
+					<a><img class="text-services-margin" src="img/map.png" width="300" height="158" alt="Наш адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19.8" onclick="getElementById('map-show').style.display='block'; return false;"></a>
 			</div>
 	
 			<button class="write-us-link red-button form-button" type="submit" form="write-us" onclick="getElementById('write-us').style.display='block'; return false;" aria-label="Жми, чтобы связаться с нами">Заблудились? Напишите нам!</button>
@@ -266,7 +289,6 @@
 				<div class="modal-form">
 					<div class="modal-form-data">
 						<div class="modal-form-name">
-							
 							<label for="your-name" class="tk-partners">Ваше имя:</label>
 							<input id="your-name" type="text" class="data" name="your-name" placeholder="Имя Фамилия">
 						</div>
@@ -283,7 +305,7 @@
 				<div class="modal-button-write">
 					<button class="modal-button-send" type="submit">Отправить</button>
 				</div>
-				<button class="modal-close" onclick="closeModal(); return false;" aria-label="Закрыть окно"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть окно"></button>
+				<button class="modal-close" type="button" id="modalClose" onclick="closeModal(); return false;" aria-label="Закрыть окно"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть окно"></button>
 			</form>
 		</section>
 		</div>
@@ -292,9 +314,9 @@
 
 <footer class=" container-width-two">
 	<div class="container-size footer-top">
-		<div class="footer-logo-layout">
+		<a class="footer-logo-layout" href="index.html">
 			<img src="img/logo-technomart.png" width="220" height="68" alt="Логотип Техномарт">
-		</div>
+		</a>
 		<ul class="footer-nav-first list-style">
 			<li>
 				<a href="blank.html">Компания</a>
@@ -341,15 +363,14 @@
 			</p>
 
 			<ul class="list-style social-button">
-				<!--7 лекция-->
 				<li>
-					<a href="#"><img src="img/social-vk.svg" width="44" height="44" alt="Наша страница Вконтакте"></a>
+					<a class="social-vk" href="#"><img src="img/social-vk.svg" width="26" height="15" alt="Наша страница Вконтакте"></a>
 				</li>
 				<li>
-					<a href="#"><img src="img/social-fb.svg" width="44" height="44" alt="Наша страница на Facebook"></a>
+					<a class="social-fb" href="#"><img src="img/social-fb.svg" width="12" height="22" alt="Наша страница на Facebook"></a>
 				</li>
 				<li>
-					<a href="#"><img src="img/social-instagram.svg" width="44" height="44" alt="Наш профиль в Instagram"></a>
+					<a class="social-instagram" href="#"><img src="img/social-instagram.svg" width="21" height="21" alt="Наш профиль в Instagram"></a>
 				</li>
 			</ul>
 
@@ -365,6 +386,6 @@
 		</div>
 	</div>
 </footer>
-		
+<script src="js/script.min.js"></script>
 </body>
 </html>

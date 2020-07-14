@@ -26,3 +26,9 @@ document.querySelector('.services li.' + id).classList.add('active');
 		});
 });
 });	
+
+let closeButton = document.querySelector('.modal-close');
+	closeButton.addEventListener("click", function() {
+	  modal.classList.toggle("closed");
+	  modalOverlay.classList.toggle("closed");
+	});
